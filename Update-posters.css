@@ -21,8 +21,6 @@
   display: var(--display-character-image, initial);
   width: 225px;
   height: 350px;
-}
-.menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture source {
   background: var(--custom-image,none) var(--custom-settings,center top/cover);
 }
 /*Уменьшение размера постера на странице персонажа для маленьких экранов*/
@@ -33,12 +31,7 @@
   }
 }
 
-.block meta ~ .b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a, .image.bubbled-processed {
-    --show-default:1;
-    --custom-image:none;
-}
-
-.l-content .b-db_entry > .c-image .cc .c-poster picture img, .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture source {
+.block meta ~ .b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a, .image.bubbled-processed, .l-content .b-db_entry > .c-image .cc .c-poster picture img, .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture source {
     --show-default:1;
     --custom-image:none;
     --display-default-character:initial;
