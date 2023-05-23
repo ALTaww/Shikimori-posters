@@ -9,12 +9,11 @@
 /* Размер текста */
 #profiles_show .b-catalog_entry-tooltip .entry-tooltip_container .inner, #profiles_favorites .b-catalog_entry-tooltip .entry-tooltip_container .inner {
   width: 278px;
-  min-height: 249px;
+  min-height: 249px; /* Фикс чтобы trigger не налезал на постер */
 }
 /* Размер подсказки */
 #profiles_show .tooltip .tooltip-inner, #profiles_favorites .tooltip .tooltip-inner {
   width: 480px;
-  min-height: 270px; /* Фикс чтобы trigger не налезал на постер */
 }
 /*Постер*/
 #profiles_show .b-catalog_entry-tooltip .inner a.name:before, #profiles_favorites .b-catalog_entry-tooltip .inner a.name:before {
