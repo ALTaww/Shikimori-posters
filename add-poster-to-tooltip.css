@@ -25,3 +25,7 @@
   left: 0;
   background: var(--custom-image,none) var(--custom-settings,center top/cover);
 }
+/* Убираю паддинг в открывающейся менюшке (trigger) */
+#profiles_show .b-catalog_entry-tooltip .flexible-button .b-add_to_list, #profiles_favorites .b-catalog_entry-tooltip .flexible-button .b-add_to_list {
+  padding-bottom: 0;
+}
