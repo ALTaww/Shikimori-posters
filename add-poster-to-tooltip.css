@@ -29,3 +29,7 @@
 #profiles_show .b-catalog_entry-tooltip .flexible-button .b-add_to_list, #profiles_favorites .b-catalog_entry-tooltip .flexible-button .b-add_to_list {
   padding-bottom: 0;
 }
+/* Включаем скрытые постеры для стиля e-design */
+#profiles_show .b-catalog_entry-tooltip > a, #profiles_show .entry-tooltip_container > .image-link, #profiles_show .b-catalog_entry-tooltip .image, #profiles_show .b-catalog_entry-tooltip > a {
+  display: flex;
+}
