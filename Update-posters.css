@@ -31,9 +31,4 @@
   }
 }
 
-.block meta ~ .b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a, .image.bubbled-processed, .l-content .b-db_entry > .c-image .cc .c-poster picture img, .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture source {
-    --show-default:1;
-    --custom-image:none;
-    --display-default-character:initial;
-    --display-character-image: none;
-}
+
