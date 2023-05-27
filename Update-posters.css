@@ -16,8 +16,8 @@
 .block meta ~ .b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a, .image.bubbled-processed {
   background: var(--custom-image,none) var(--custom-settings,center top/cover);
 }
-/*Скрываем постер на странице персонажа */
-.menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img[src*="characters/"] {
+/*Скрываем постер на странице персонажа и человека */
+.menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img[src*="characters/"], .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img[src*="people/"] {
     display: var(--display-default-character, initial);
 }
 /*Изменить постер персонажа */
