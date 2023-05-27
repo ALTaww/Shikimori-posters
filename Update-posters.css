@@ -4,13 +4,13 @@
   height: 75px;
   border-radius: 4px;
 }
+/*Замена постеров content'ом*/
 img {
-    opacity: 1;
     content: var(--custom-image, "");
 }
 /*Скрываем стандартный постер на странице аниме или манги + на странице редактирования + мелкие постеры*/
 .block meta ~ .b-db_entry .c-image .cc .c-poster .b-image img, .b-menu_logo a picture img, .image.bubbled-processed img {
-    opacity: var(--show-default,1) !important;
+    opacity: var(--show-default,1);
 }
 /*На странице тайтла + на странице редактирования + мелкие постеры*/
 .block meta ~ .b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a, .image.bubbled-processed {
