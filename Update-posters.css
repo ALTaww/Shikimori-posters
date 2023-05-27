@@ -4,16 +4,20 @@
   height: 75px;
   border-radius: 4px;
 }
+/*Замена постеров content'ом в истории, на главной странице и при открытии изображения на странице тайтла*/
+.p-profiles .profile-head .c-history .entry img, .b-user_rate-history img, img.mfp-img {
+    content: var(--custom-image, "");
+}
 /*Скрываем стандартный постер на странице аниме или манги + на странице редактирования + мелкие постеры*/
 .block meta ~ .b-db_entry .c-image .cc .c-poster .b-image img, .b-menu_logo a picture img, .image.bubbled-processed img {
-    opacity:var(--show-default,1);
+    opacity: var(--show-default,1);
 }
 /*На странице тайтла + на странице редактирования + мелкие постеры*/
 .block meta ~ .b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a, .image.bubbled-processed {
   background: var(--custom-image,none) var(--custom-settings,center top/cover);
 }
 /*Скрываем постер на странице персонажа */
-.menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img {
+.menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img[src*="characters/"] {
     display: var(--display-default-character, initial);
 }
 /*Изменить постер персонажа */
@@ -31,9 +35,4 @@
   }
 }
 
-.block meta ~ .b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a, .image.bubbled-processed, .l-content .b-db_entry > .c-image .cc .c-poster picture img, .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture source {
-    --show-default:1;
-    --custom-image:none;
-    --display-default-character:initial;
-    --display-character-image: none;
-}
+
