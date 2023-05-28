@@ -35,7 +35,7 @@
   }
 }
 /*Убираем custom-image в спойлерных коллекциях как это сделано у грина*/
-.is-spoilers .b-catalog_entry>.cover .image-cutter, .is-spoilers .b-catalog_entry .cover .image-cutter img {
+.is-spoilers .b-catalog_entry .cover .image-cutter img {
   --show-default:1;
   --custom-image:none;
 }
