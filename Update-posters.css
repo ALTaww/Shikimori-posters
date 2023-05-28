@@ -5,7 +5,7 @@
   border-radius: 4px;
 }
 /*Замена постеров content'ом в истории, на главной странице и при открытии изображения на странице тайтла*/
-.p-profiles .profile-head .c-history .entry img, .b-user_rate-history img, img.mfp-img {
+.p-profiles .profile-head .c-history .entry img, .b-user_rate-history img, img.mfp-img, .b-topic > .inner header img {
     content: var(--custom-image, "");
 }
 /*Скрываем стандартный постер на странице аниме или манги + на странице редактирования + мелкие постеры*/
