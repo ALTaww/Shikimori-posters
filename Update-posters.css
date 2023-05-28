@@ -34,5 +34,10 @@
     height: 249px;
   }
 }
+/*Убираем custom-image в спойлерных коллекциях как это сделано у грина*/
+.is-spoilers .b-catalog_entry>.cover .image-cutter{
+  --show-default:1;
+  --custom-image:none;
+}
 
 
