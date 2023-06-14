@@ -9,7 +9,7 @@
     content: var(--custom-image, "");
 }
 /*Скрываем стандартный постер на странице аниме или манги + на странице редактирования + мелкие постеры*/
-.block meta ~ .b-db_entry .c-image .cc .c-poster .b-image img, .b-menu_logo a picture img, .image.bubbled-processed img {
+.block meta ~ .b-db_entry .c-image .cc .c-poster .b-image img, .b-menu_logo a picture img, .image.bubbled-processed img, .b-db_entry-variant-list_item .image img {
     opacity: var(--show-default,1);
 }
 /*На странице тайтла + на странице редактирования + мелкие постеры*/
@@ -20,7 +20,7 @@
 .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img[src*="characters/"], .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img[src*="people/"] {
     display: var(--display-default-character, initial);
 }
-/*Изменить постер персонажа */
+/* Изменить постер персонажа */
 .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture source {
   display: var(--display-character-image, initial);
   width: 225px;
@@ -38,6 +38,13 @@
 .is-spoilers .b-catalog_entry .cover .image-cutter img {
   --show-default:1;
   --custom-image:none;
+}
+
+/*Постер в поиске*/
+.b-db_entry-variant-list_item .image {
+    background: var(--custom-image,none) var(--custom-settings,center top/cover);
+    height: 75px;
+    border-radius: 4px; /*Для того, чтобы постер, где много деталей выглядел четче*/
 }
 
 
