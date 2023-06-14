@@ -1,50 +1,46 @@
-/*Устанавливаем размер мелкого постера*/
-.image.bubbled-processed {
-    width: 48px;
-  height: 75px;
-  border-radius: 4px;
+/* Мелкие постеры */
+.b-db_entry-variant-list_item .image {
+    background: var(--custom-image,none) var(--custom-settings,center top/cover);
+    height: 75px;
+    border-radius: var(--small-custom-image-border, 4px); /*Для того, чтобы постер, где много деталей выглядел четче*/
 }
+
 /*Замена постеров content'ом в истории, на главной странице и при открытии изображения на странице тайтла*/
 .p-profiles .profile-head .c-history .entry img, .b-user_rate-history img, img.mfp-img, .b-topic > .inner header img {
     content: var(--custom-image, "");
 }
-/*Скрываем стандартный постер на странице аниме или манги + на странице редактирования + мелкие постеры*/
-.block meta ~ .b-db_entry .c-image .cc .c-poster .b-image img, .b-menu_logo a picture img, .image.bubbled-processed img, .b-db_entry-variant-list_item .image img {
+
+/* Главная страница + на странице редактирования + мелкие постеры*/
+.b-db_entry .c-image .cc .c-poster img, .b-menu_logo a picture img, .b-db_entry-variant-list_item .image img {
     opacity: var(--show-default,1);
 }
-/*На странице тайтла + на странице редактирования + мелкие постеры*/
-.block meta ~ .b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a, .image.bubbled-processed {
-  background: var(--custom-image,none) var(--custom-settings,center top/cover);
-}
-/*Скрываем постер на странице персонажа и человека */
-.menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img[src*="characters/"], .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture img[src*="people/"] {
-    display: var(--display-default-character, initial);
-}
-/* Изменить постер персонажа */
-.menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture source {
-  display: var(--display-character-image, initial);
-  width: 225px;
-  height: 350px;
-  background: var(--custom-image,none) var(--custom-settings,center top/cover);
-}
-/*Уменьшение размера постера на странице персонажа для маленьких экранов*/
-@media screen and (max-width: 400px) {
-  .menu-slide-outer .menu-slide-inner .l-content .b-db_entry > .c-image .cc .c-poster picture source {
-    width: 160px;
-    height: 249px;
-  }
-}
-/*Убираем custom-image в спойлерных коллекциях как это сделано у грина*/
-.is-spoilers .b-catalog_entry .cover .image-cutter img {
-  --show-default:1;
-  --custom-image:none;
-}
 
-/*Постер в поиске*/
-.b-db_entry-variant-list_item .image {
+/*На странице тайтла + на странице редактирования */
+.b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a {
     background: var(--custom-image,none) var(--custom-settings,center top/cover);
-    height: 75px;
-    border-radius: 4px; /*Для того, чтобы постер, где много деталей выглядел четче*/
+    border-radius: var(--custom-image-border, 4px);
 }
 
+/* Постер персонажа и человека */
+#characters_show .c-poster picture, #people_show .c-poster picture {
+    position: relative;
+}
 
+#characters_show .b-db_entry > .c-image source, #people_show .b-db_entry > .c-image source {
+    width: 100%;
+    height: 97.92%;
+    background: var(--custom-image,none) var(--custom-settings,center top/cover);
+    position: absolute;
+    border-radius: var(--custom-image-border, 4px);
+}
+
+/*Убираем custom-image в спойлерных коллекциях, как это сделано у грина*/
+.is-spoilers .b-catalog_entry .cover .image-cutter img {
+    --show-default:1;
+    --custom-image:none;
+}
+
+/* Кастомный постер грина в подсказке */
+.b-catalog_entry-tooltip>.entry-tooltip_container>a::before{
+  border-radius: var(--custom-image-border, 4px);
+}
