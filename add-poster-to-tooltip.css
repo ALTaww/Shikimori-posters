@@ -24,6 +24,7 @@
   top: 0;
   left: 0;
   background: var(--custom-image,none) var(--custom-settings,center top/cover);
+  border-radius: var(--custom-image-border, 4px);
 }
 /* Убираю паддинг в открывающейся менюшке (trigger) */
 #profiles_show .b-catalog_entry-tooltip .flexible-button .b-add_to_list, #profiles_favorites .b-catalog_entry-tooltip .flexible-button .b-add_to_list {
