@@ -15,18 +15,18 @@
     opacity: var(--show-default,1);
 }
 
-/*На странице тайтла + на странице редактирования */
-.b-db_entry .c-image .cc .c-poster .b-image, .b-menu_logo a {
+/*На главной странице постера с большим кол-вом пикселей + на странице редактирования */
+.b-db_entry .c-image .cc .c-poster > .b-image, .b-menu_logo a {
     background: var(--custom-image,none) var(--custom-settings,center top/cover);
     border-radius: var(--custom-image-border, 4px);
 }
 
-/* Постер персонажа и человека */
-#characters_show .c-poster picture, #people_show .c-poster picture {
+/* Постер 225x350px Главная страница */
+.b-db_entry .c-image .cc .c-poster > picture {
     position: relative;
 }
 
-#characters_show .b-db_entry > .c-image source, #people_show .b-db_entry > .c-image source {
+.b-db_entry .c-image .cc .c-poster > picture source {
     width: 100%;
     height: 97.92%;
     background: var(--custom-image,none) var(--custom-settings,center top/cover);
