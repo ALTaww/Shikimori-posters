@@ -40,7 +40,11 @@
     --custom-image:none;
 }
 
-/* Кастомный постер грина в подсказке */
-.b-catalog_entry-tooltip>.entry-tooltip_container>a::before{
+/* Кастомный постер грина */
+.b-catalog_entry-tooltip>.entry-tooltip_container>a::before, .b-catalog_entry>.cover .image-cutter{
   border-radius: var(--custom-image-border, 4px);
+}
+
+.b-catalog_entry-tooltip .inner .additional-images .link .image-cutter{
+  border-radius: var(--small-custom-image-border, 4px);
 }
