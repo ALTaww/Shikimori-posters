@@ -46,13 +46,7 @@ img.mfp-img, .b-topic > .inner header img {
     border-radius: var(--custom-image-border, 4px);
 }
 
-/*Убираем custom-image в спойлерных коллекциях, как это сделано у грина*/
-.is-spoilers .b-catalog_entry .cover .image-cutter img {
-    --show-default:1;
-    --custom-image:none;
-}
-
-/* Кастомный постер грина */
+/* Кастомный постер грина (с 14.04.25 работает только для моего дополнения в подсказках, оставил просто так, пусть будет) */
 .b-catalog_entry-tooltip>.entry-tooltip_container>a::before,
 .b-catalog_entry>.cover .image-cutter{
   border-radius: var(--custom-image-border, 4px);
