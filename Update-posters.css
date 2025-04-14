@@ -48,3 +48,8 @@
 .b-catalog_entry-tooltip .inner .additional-images .link .image-cutter{
   border-radius: var(--small-custom-image-border, 4px);
 }
+
+/* Обновление 14.04.25 скрываем "вертикальные" постеры в избранном за "горизонтальными" */
+.p-profiles .cc-favourites > .b-catalog_entry .cover picture::after {
+  z-index: -1;
+}
