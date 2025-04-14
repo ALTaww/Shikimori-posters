@@ -1,3 +1,10 @@
+/* 14.04.25 Для всех кастомных постеров добавляем border-radius */
+/* Выше всех чтобы не переназначить другие border-radius */
+.b-catalog_entry-tooltip>.entry-tooltip_container>a>picture::after,
+.b-catalog_entry>.cover .image-cutter picture::after {
+     border-radius: var(--custom-image-border, 4px);
+}
+
 /* Мелкие постеры */
 .b-db_entry-variant-list_item .image {
     background: var(--custom-image,none) var(--custom-settings,center top/cover);
@@ -6,17 +13,22 @@
 }
 
 /*Замена постеров content'ом в истории, на главной странице и при открытии изображения на странице тайтла*/
-.p-profiles .profile-head .c-history .entry img, .b-user_rate-history img, img.mfp-img, .b-topic > .inner header img {
+.p-profiles .profile-head .c-history .entry img,
+.b-user_rate-history img,
+img.mfp-img, .b-topic > .inner header img {
     content: var(--custom-image, "");
 }
 
 /* Главная страница + на странице редактирования + мелкие постеры*/
-.b-db_entry .c-image .cc .c-poster img, .b-menu_logo a picture img, .b-db_entry-variant-list_item .image img {
+.b-db_entry .c-image .cc .c-poster img,
+.b-menu_logo a picture img,
+.b-db_entry-variant-list_item .image img {
     opacity: var(--show-default,1);
 }
 
 /*На главной странице постера с большим кол-вом пикселей + на странице редактирования */
-.b-db_entry .c-image .cc .c-poster > .b-image, .b-menu_logo a {
+.b-db_entry .c-image .cc .c-poster > .b-image,
+.b-menu_logo a {
     background: var(--custom-image,none) var(--custom-settings,center top/cover);
     border-radius: var(--custom-image-border, 4px);
 }
@@ -41,7 +53,8 @@
 }
 
 /* Кастомный постер грина */
-.b-catalog_entry-tooltip>.entry-tooltip_container>a::before, .b-catalog_entry>.cover .image-cutter{
+.b-catalog_entry-tooltip>.entry-tooltip_container>a::before,
+.b-catalog_entry>.cover .image-cutter{
   border-radius: var(--custom-image-border, 4px);
 }
 
