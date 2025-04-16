@@ -1,7 +1,8 @@
-/* 14.04.25 Для всех кастомных постеров добавляем border-radius */
+/* 14.04.25 Для всех кастомных постеров grin'а добавляем border-radius */
 /* Выше всех чтобы не переназначить другие border-radius */
-.b-catalog_entry-tooltip>.entry-tooltip_container>a>picture::after,
-.b-catalog_entry>.cover .image-cutter picture::after {
+.b-catalog_entry>.cover .image-cutter,
+.b-catalog_entry-tooltip>.entry-tooltip_container>a::before,
+.b-collection-topic>.inner .collection-row .cover .image-cutter::before {
      border-radius: var(--custom-image-border, 4px);
 }
 
@@ -54,9 +55,4 @@ img.mfp-img, .b-topic > .inner header img {
 
 .b-catalog_entry-tooltip .inner .additional-images .link .image-cutter{
   border-radius: var(--small-custom-image-border, 4px);
-}
-
-/* Обновление 14.04.25 скрываем "вертикальные" постеры в избранном за "горизонтальными" */
-.p-profiles .cc-favourites > .b-catalog_entry .cover picture::after {
-  z-index: -1;
 }
